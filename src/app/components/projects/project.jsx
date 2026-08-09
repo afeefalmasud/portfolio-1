@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import React from 'react';
 import { FiArrowUpRight } from 'react-icons/fi';
 
@@ -10,9 +11,10 @@ export default function ProjectsSection() {
       title: 'NexFit',
       subtitle: 'Gym Management Platform',
       description:
-        'A modern gym management platform designed to help gyms manage members, trainers, memberships, schedules, and day-to-day operations through a centralized dashboard.',
+        'A modern gym management platform designed to help gyms manage members, trainers, memberships and day-to-day operations through a dashboard.',
       tags: ['Next.js', 'Express.js', 'MongoDB', 'BetterAuth', 'Tailwind CSS'],
-      image: '/assets/1.png', // Replace with your image path
+      image: '/assets/1.png',
+      href: 'https://nexfit-ten.vercel.app/'
     },
     {
       id: '02',
@@ -21,7 +23,8 @@ export default function ProjectsSection() {
       description:
         'A full-stack platform for discovering, booking, and managing sports facilities with role-based features and authentication.',
       tags: ['Next.js', 'Express.js', 'MongoDB', 'BetterAuth', 'Tailwind CSS'],
-      image: '/assets/2.png', // Replace with your image path
+      image: '/assets/2.png',
+      href: 'https://sportnest-pi.vercel.app/'
     },
     {
       id: '03',
@@ -30,16 +33,18 @@ export default function ProjectsSection() {
       description:
         'A modern platform for browsing and borrowing books with user authentication and a clean, responsive interface.',
       tags: ['Next.js', 'MongoDB', 'BetterAuth', 'Tailwind CSS'],
-      image: '/assets/3.png', // Replace with your image path
+      image: '/assets/3.png',
+      href: 'https://readify-eight.vercel.app/'
     },
     {
       id: '04',
-      title: 'Job Application Tracker',
-      subtitle: 'Job Search Management Platform',
+      title: 'Kin Keeper',
+      subtitle: 'Smart Relationship Tracking App',
       description:
-        'A simple application for organizing job applications, tracking their progress, and managing application details in one place.',
-      tags: ['JavaScript', 'Tailwind CSS', 'API'],
-      image: '/assets/4.png', // Replace with your image path
+        'A smart relationship tracking system that helps you stay connected with the people who matter by tracking interactions and communication habits.',
+      tags: ['React.js', 'JavaScript', 'Tailwind CSS', 'API'],
+      image: '/assets/4.png',
+      href: 'https://kin-keeper-nine.vercel.app/'
     },
     
   ];
@@ -69,7 +74,7 @@ export default function ProjectsSection() {
             >
               <div>
                 {/* Project Image Box */}
-                <div className="relative w-full h-[220px] bg-[#121010] overflow-hidden flex items-center justify-center p-4">
+                <div className="relative w-full h-55 bg-[#121010] overflow-hidden flex items-center justify-center p-4">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -108,10 +113,13 @@ export default function ProjectsSection() {
 
               {/* View details Button */}
               <div className="p-6 pt-0">
-                <button className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold text-gray-200 border border-white/10 transition-all duration-300 group-hover:bg-[#ff6b2b] group-hover:text-black group-hover:border-[#ff6b2b] group-hover:shadow-md">
-                  View details
+                <Link href={project.href}>
+                    <button className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold text-gray-200 border border-white/10 transition-all duration-300 group-hover:bg-[#ff6b2b] group-hover:text-black group-hover:border-[#ff6b2b] group-hover:shadow-md">
+                  View
                   <FiArrowUpRight className="text-sm transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </button>
+                </Link>
+                
               </div>
             </div>
           ))}

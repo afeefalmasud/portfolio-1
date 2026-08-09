@@ -53,7 +53,7 @@ export default function EducationSection() {
         {/* Horizontal Timeline */}
         <div className="relative pt-6">
           {/* Horizontal Line across all columns */}
-          <div className="hidden md:block absolute top-[31px] left-0 w-full h-[1px] bg-white/10 -z-0" />
+          <div className="hidden md:block absolute top-7.75 left-0 w-full h-px bg-white/10 z-0" />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 relative z-10">
             {educationList.map((item, index) => (

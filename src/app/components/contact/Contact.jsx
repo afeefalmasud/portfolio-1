@@ -39,7 +39,7 @@ export default function ContactSection() {
       />
 
       {/* 2. Animated Infinite Pulse Orange Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[320px] bg-[#ff6b2b]/15 blur-[120px] pointer-events-none rounded-full animate-pulse transition-all duration-1000" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-162.5 h-80 bg-[#ff6b2b]/15 blur-[120px] pointer-events-none rounded-full animate-pulse transition-all duration-1000" />
 
       {/* Main Content */}
       <div className="container mx-auto px-6 md:px-12 space-y-12 relative z-10">
@@ -92,7 +92,7 @@ export default function ContactSection() {
         <div className="pt-2">
           <a
             href="mailto:arman.hossain.dev@gmail.com"
-            className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-gradient-to-r from-[#ff6b2b] to-[#ff8c42] text-black font-semibold text-xs tracking-wide shadow-lg shadow-[#ff6b2b]/20 transition-all duration-300 hover:brightness-110 hover:scale-105 hover:shadow-[#ff6b2b]/40 active:scale-95"
+            className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-linear-to-r from-[#ff6b2b] to-[#ff8c42] text-black font-semibold text-xs tracking-wide shadow-lg shadow-[#ff6b2b]/20 transition-all duration-300 hover:brightness-110 hover:scale-105 hover:shadow-[#ff6b2b]/40 active:scale-95"
           >
             <HiOutlineMail className="text-base" />
             Send me an email

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@heroui/react";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
+import Link from "next/link";
 
 export default function Navbar() {
   const [hoveredNav, setHoveredNav] = useState(null);
@@ -42,7 +43,7 @@ export default function Navbar() {
             {item.name}
             {hoveredNav === item.name && (
               <motion.div
-                className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#ff6b2b] origin-left"
+                className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#ff6b2b] origin-left"
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 exit={{ scaleX: 0 }}
@@ -55,13 +56,16 @@ export default function Navbar() {
 
       {/* Action CTA & Mobile Hamburger Toggle */}
       <div className="flex items-center gap-4">
-        <Button
+        <Link href='/assets/resume.pdf'>
+          <Button
           as="a"
           href="#resume"
           className="bg-[#ff6b2b] text-black font-semibold px-6 py-2 rounded-full hover:bg-[#e0591f] hover:scale-105 transition-all shadow-md shadow-[#ff6b2b]/20"
         >
           Resume
         </Button>
+        </Link>
+        
 
         {/* Hamburger Button (Mobile Only) */}
         <button

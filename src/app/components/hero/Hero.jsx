@@ -13,6 +13,7 @@ import {
 import Typewriter from "./Typewriter";
 import Navbar from "../navbar/Navbar";
 import { FiDownload, FiEye } from "react-icons/fi";
+import Link from "next/link";
 
 export default function HeroSection() {
   const titles = [
@@ -50,8 +51,8 @@ export default function HeroSection() {
       />
 
       {/* Orange Radial Glows */}
-      <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-[#ff6b2b]/15 rounded-full blur-[140px] pointer-events-none z-0" />
-      <div className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-[#ff6b2b]/10 rounded-full blur-[120px] pointer-events-none z-0" />
+      <div className="absolute top-[-10%] right-[-5%] w-150 h-150 bg-[#ff6b2b]/15 rounded-full blur-[140px] pointer-events-none z-0" />
+      <div className="absolute bottom-[-10%] left-[-5%] w-125 h-125 bg-[#ff6b2b]/10 rounded-full blur-[120px] pointer-events-none z-0" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
         {/* NAVBAR COMPONENT */}
@@ -79,7 +80,7 @@ export default function HeroSection() {
                 Hi, I'm Afeef
               </h1>
 
-              <div className="min-h-[80px] sm:min-h-[100px] flex items-center">
+              <div className="min-h-20 sm:min-h-25 flex items-center">
                 <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#ff6b2b] tracking-tight leading-tight">
                   <Typewriter
                     words={titles}
@@ -103,7 +104,8 @@ export default function HeroSection() {
               variants={itemVariants}
               className="flex flex-wrap gap-4 pt-2"
             >
-              <Button
+              <Link href='/assets/resume.pdf' download>
+                 <Button
                 size="lg"
                 className="bg-[#ff6b2b] text-black font-medium rounded-xl px-6 py-3 flex items-center gap-2 hover:bg-[#e0591f] hover:scale-105 transition-all shadow-lg shadow-[#ff6b2b]/20"
                 startContent={<FaDownload className="text-sm" />}
@@ -111,17 +113,22 @@ export default function HeroSection() {
                 <FiDownload />
                 Download Resume
               </Button>
+              </Link>
+             
 
               {/* View Resume Button with Orange Border Hover (Text stays white) */}
-              <Button
+              <Link href='/assets/resume.pdf'>
+                 <Button
                 size="lg"
                 variant="bordered"
-                className="border-white/15 border-2 text-white font-medium rounded-xl px-6 py-3 flex items-center gap-2 border hover:!border-[#ff6b2b] hover:scale-105 transition-all"
+                className="border-white/15 border-2 text-white font-medium rounded-xl px-6 py-3 flex items-center gap-2 hover:border-[#ff6b2b]! hover:scale-105 transition-all"
                 startContent={<FaEye className="text-sm" />}
               >
                 <FiEye />
                 View Resume
               </Button>
+              </Link>
+             
             </motion.div>
 
             {/* Social Links */}
@@ -130,10 +137,9 @@ export default function HeroSection() {
               className="flex items-center gap-3 pt-4"
             >
               {[
-                { icon: <FaGithub />, href: "#" },
-                { icon: <FaLinkedinIn />, href: "#" },
-                { icon: <FaTwitter />, href: "#" },
-                { icon: <FaFacebookF />, href: "#" },
+                { icon: <FaGithub />, href: "https://github.com/afeefalmasud" },
+                { icon: <FaLinkedinIn />, href: "https://www.linkedin.com/in/afeef-al-masud" },
+                { icon: <FaFacebookF />, href: "https://www.facebook.com/afeef.masud.07" },
               ].map((social, i) => (
                 <a
                   key={i}
@@ -157,7 +163,7 @@ export default function HeroSection() {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="relative w-full max-w-[400px]"
+              className="relative w-full max-w-100"
             >
               <div className="relative rounded-3xl bg-[#141211] border border-white/10 overflow-hidden shadow-2xl group">
                 <div className="w-full h-100 md:h-120 bg-linear-to-b from-transparent to-black/60 relative flex items-center justify-center">
@@ -170,7 +176,7 @@ export default function HeroSection() {
               </div>
 
               {/* Floating Badge hanging outside frame */}
-              <div className="absolute -bottom-4 -left-4 md:-left-6 px-6 py-4 rounded-2xl bg-[#1d1917]/90 backdrop-blur-md border border-white/10 shadow-2xl min-w-[180px] z-20">
+              <div className="absolute -bottom-4 -left-4 md:-left-6 px-6 py-4 rounded-2xl bg-[#1d1917]/90 backdrop-blur-md border border-white/10 shadow-2xl min-w-45 z-20">
                 <p className="text-3xl font-extrabold text-[#ff6b2b]">1+</p>
                 <p className="text-xs text-gray-400 font-medium leading-tight mt-1">
                   years building for the web

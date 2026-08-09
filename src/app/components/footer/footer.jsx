@@ -7,7 +7,7 @@ export default function Footer() {
 
   const socialLinks = [
     { name: 'GitHub', href: 'https://github.com/afeefalmasud' },
-    { name: 'LinkedIn', href: 'www.linkedin.com/in/afeef-al-masud' },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/afeef-al-masud' },
     { name: 'Facebook', href: 'https://www.facebook.com/afeef.masud.07' },
   ];
 
