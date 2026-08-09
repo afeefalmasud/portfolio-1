@@ -91,7 +91,7 @@ export default function ContactSection() {
         {/* Action Button */}
         <div className="pt-2">
           <a
-            href="mailto:arman.hossain.dev@gmail.com"
+            href="mailto:its.afeefalmasud@gmail.com"
             className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-linear-to-r from-[#ff6b2b] to-[#ff8c42] text-black font-semibold text-xs tracking-wide shadow-lg shadow-[#ff6b2b]/20 transition-all duration-300 hover:brightness-110 hover:scale-105 hover:shadow-[#ff6b2b]/40 active:scale-95"
           >
             <HiOutlineMail className="text-base" />
